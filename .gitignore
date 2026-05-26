@@ -13,3 +13,15 @@ geoserver_data/gwc/*.bak
 
 # Local generated/test files
 *.log
+
+# DuckDB local databases
+*.duckdb
+*.duckdb.wal
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Local backups
+backup_lab_old/
+restore_safety_backup/
