@@ -1,0 +1,46 @@
+services:
+  postgis:
+    image: postgis/postgis:16-3.4
+    container_name: postgis
+    environment:
+      POSTGRES_DB: gis
+      POSTGRES_USER: gisuser
+      POSTGRES_PASSWORD: gispass
+    volumes:
+      - ./init-db:/docker-entrypoint-initdb.d:ro
+      - postgis_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gisuser -d gis"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  geoserver:
+    image: kartoza/geoserver:2.24.2
+    container_name: geoserver
+    environment:
+      GEOSERVER_ADMIN_USER: admin
+      GEOSERVER_ADMIN_PASSWORD: geoserver
+    volumes:
+      - ./geoserver_data:/opt/geoserver/data_dir
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgis:
+        condition: service_healthy
+
+  web:
+    image: nginx:1.27-alpine
+    container_name: lab2-web
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8090:80"
+    depends_on:
+      - geoserver
+
+volumes:
+  postgis_data:

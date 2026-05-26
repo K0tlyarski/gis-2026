@@ -1,0 +1,15 @@
+.DS_Store
+
+# Node/Vite
+client/node_modules/
+client/dist/
+client/.env*
+
+# GeoServer runtime noise
+geoserver_data/logs/
+geoserver_data/temp/
+geoserver_data/tmp/
+geoserver_data/gwc/*.bak
+
+# Local generated/test files
+*.log

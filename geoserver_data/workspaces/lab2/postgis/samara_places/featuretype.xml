@@ -1,0 +1,41 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--14be741c:19e647637d8:-7ff3</id>
+  <name>samara_places</name>
+  <nativeName>samara_places</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--14be741c:19e647637d8:-7ff5</id>
+  </namespace>
+  <title>Samara places</title>
+  <keywords>
+    <string>features</string>
+    <string>samara_places</string>
+  </keywords>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>50.09449768066406</minx>
+    <maxx>50.192501068115234</maxx>
+    <miny>53.186397552490234</miny>
+    <maxy>53.232303619384766</maxy>
+    <crs>EPSG:4326</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>50.09449768066406</minx>
+    <maxx>50.192501068115234</maxx>
+    <miny>53.186397552490234</miny>
+    <maxy>53.232303619384766</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--14be741c:19e647637d8:-7ff4</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>
