@@ -1,0 +1,16 @@
+<layer>
+  <name>samara_places</name>
+  <id>LayerInfoImpl--14be741c:19e647637d8:-7ff2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--14be741c:19e647637d8:-8000</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--14be741c:19e647637d8:-7ff3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2026-05-26 13:26:10.279 UTC</dateCreated>
+</layer>
