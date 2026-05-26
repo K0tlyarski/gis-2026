@@ -226,10 +226,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11-я линия",
         "building": "yes",
         "building:levels": "1",
-        "id": "way/1518774643"
+        "id": "way/1518774643",
+        "addr:housenumber": "110",
+        "addr:place": "СТ СМПО \"Металлист\""
       },
       "geometry": {
         "type": "Polygon",
@@ -269,10 +271,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11-я линия",
         "building": "yes",
         "building:levels": "1",
-        "id": "way/1518774644"
+        "id": "way/1518774644",
+        "addr:housenumber": "121",
+        "addr:place": "территория 18 км Московского шоссе"
       },
       "geometry": {
         "type": "Polygon",
@@ -312,9 +316,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11-я линия",
         "building": "yes",
-        "id": "way/1518774645"
+        "id": "way/1518774645",
+        "addr:housenumber": "108",
+        "addr:place": "СТ СМПО \"Металлист\"",
+        "building:levels": "1"
       },
       "geometry": {
         "type": "Polygon",
@@ -354,9 +361,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11-я линия",
         "building": "yes",
-        "id": "way/1518774646"
+        "id": "way/1518774646",
+        "addr:housenumber": "114",
+        "addr:place": "СТ СМПО \"Металлист\"",
+        "building:levels": "1"
       },
       "geometry": {
         "type": "Polygon",
@@ -396,9 +406,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11-я линия",
         "building": "yes",
-        "id": "way/1518774647"
+        "id": "way/1518774647",
+        "addr:housenumber": "118",
+        "addr:place": "СТ СМПО \"Металлист\"",
+        "building:levels": "1"
       },
       "geometry": {
         "type": "Polygon",
@@ -438,10 +451,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11 линия",
         "building": "yes",
         "building:levels": "1",
-        "id": "way/1518774648"
+        "id": "way/1518774648",
+        "addr:housenumber": "129",
+        "addr:place": "массив 18 км Московского шоссе"
       },
       "geometry": {
         "type": "Polygon",
@@ -481,10 +496,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "12-я линия",
         "building": "yes",
         "building:levels": "1",
-        "id": "way/1518774649"
+        "id": "way/1518774649",
+        "addr:housenumber": "99",
+        "addr:place": "СТ СМПО \"Металлист\""
       },
       "geometry": {
         "type": "Polygon",
@@ -524,10 +541,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11 линия",
         "building": "yes",
         "building:levels": "1",
-        "id": "way/1518774650"
+        "id": "way/1518774650",
+        "addr:housenumber": "125",
+        "addr:place": "массив 18 км Московского шоссе"
       },
       "geometry": {
         "type": "Polygon",
@@ -567,10 +586,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11-я линия",
         "building": "yes",
         "building:levels": "1",
-        "id": "way/1518774651"
+        "id": "way/1518774651",
+        "addr:housenumber": "104",
+        "addr:place": "СТ СМПО \"Металлист\""
       },
       "geometry": {
         "type": "Polygon",
@@ -610,10 +631,12 @@
         "user": "vadimkotlyarskiy",
         "uid": "24150741",
         "addr:city": "Самара",
-        "addr:street": "10-я линия",
+        "addr:street": "11-я линия",
         "building": "yes",
         "building:levels": "1",
-        "id": "way/1518774652"
+        "id": "way/1518774652",
+        "addr:housenumber": "120",
+        "addr:place": "СДТ СМПО \"Металлист\""
       },
       "geometry": {
         "type": "Polygon",
