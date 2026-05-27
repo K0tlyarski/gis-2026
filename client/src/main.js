@@ -34,6 +34,18 @@ const roadsLayer = new ImageLayer({
   }),
 });
 
+const poiLayer = new ImageLayer({
+  source: new ImageWMS({
+    url: geoserverWmsUrl,
+    params: {
+      LAYERS: 'gis:poi',
+      TILED: true,
+    },
+    ratio: 1,
+    serverType: 'geoserver',
+  }),
+});
+
 const map = new Map({
   target: 'map',
   layers: [
@@ -42,6 +54,7 @@ const map = new Map({
     }),
     buildingsLayer,
     roadsLayer,
+    poiLayer,
   ],
   view: new View({
     center: fromLonLat([50.3064, 53.263]),

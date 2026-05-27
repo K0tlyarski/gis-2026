@@ -8,7 +8,6 @@ services:
       POSTGRES_PASSWORD: gispass
     volumes:
       - ./init-db:/docker-entrypoint-initdb.d:ro
-      - postgis_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     healthcheck:
@@ -41,6 +40,3 @@ services:
       - "8090:80"
     depends_on:
       - geoserver
-
-volumes:
-  postgis_data:
