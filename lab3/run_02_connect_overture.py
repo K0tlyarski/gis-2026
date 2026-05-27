@@ -136,9 +136,7 @@ CREATE TABLE overture_partitions (
 INSERT INTO overture_partitions VALUES
 {partition_values};
 
-DROP VIEW IF EXISTS overture_buildings;
-
-CREATE VIEW overture_buildings AS
+CREATE OR REPLACE VIEW overture_buildings AS
 WITH local_bbox AS (
     SELECT
         {minx}::DOUBLE AS minx,

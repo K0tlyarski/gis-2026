@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DB_PATH = ROOT / "lab3" / "lab3.duckdb"
 SQL_PATH = ROOT / "lab3" / "04_export_geojson.sql"
 OUTPUT_PATH = ROOT / "lab3" / "overture.geojson"
+CLIENT_OUTPUT_PATH = ROOT / "client" / "public" / "overture.geojson"
 
 
 def main():
@@ -52,12 +53,12 @@ def main():
             "type": "FeatureCollection",
             "features": features,
         }
-        OUTPUT_PATH.write_text(
-            json.dumps(collection, ensure_ascii=False),
-            encoding="utf-8",
-        )
+        geojson_text = json.dumps(collection, ensure_ascii=False)
+        OUTPUT_PATH.write_text(geojson_text, encoding="utf-8")
+        CLIENT_OUTPUT_PATH.write_text(geojson_text, encoding="utf-8")
 
         print(f"GeoJSON: {OUTPUT_PATH}")
+        print(f"Client GeoJSON: {CLIENT_OUTPUT_PATH}")
         print(f"Features: {len(features)}")
         for source_type, count in con.execute(
             """

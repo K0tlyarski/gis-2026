@@ -3,9 +3,25 @@ INSTALL httpfs;
 LOAD spatial;
 LOAD httpfs;
 
-DROP VIEW IF EXISTS overture_buildings_classified;
-
-CREATE VIEW overture_buildings_classified AS
+CREATE OR REPLACE VIEW overture_buildings_classified AS
+WITH user_buildings AS (
+    SELECT ST_SetCRS(geom, '4326') AS geom
+    FROM my_buildings
+    WHERE building IS NOT NULL
+),
+overture_buildings_normalized AS (
+    SELECT
+        id,
+        ST_SetCRS(geom, '4326') AS geom,
+        bbox,
+        sources,
+        subtype,
+        class,
+        height,
+        num_floors,
+        filename
+    FROM overture_buildings
+)
 SELECT
     o.id,
     o.geom,
@@ -19,12 +35,12 @@ SELECT
     CASE
         WHEN EXISTS (
             SELECT 1
-            FROM my_buildings AS m
-            WHERE ST_Intersects(o.geom, m.geom)
+            FROM user_buildings AS m
+            WHERE ST_Contains(m.geom, ST_Centroid(o.geom))
         ) THEN 'my'
         WHEN CAST(o.sources AS VARCHAR) ILIKE '%openstreetmap%'
           OR CAST(o.sources AS VARCHAR) ILIKE '%osm%'
         THEN 'osm'
         ELSE 'ml'
     END AS source_type
-FROM overture_buildings AS o;
+FROM overture_buildings_normalized AS o;

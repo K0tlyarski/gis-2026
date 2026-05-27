@@ -20,9 +20,7 @@ CREATE TABLE overture_partitions (
 INSERT INTO overture_partitions VALUES
 ('2026-05-20.0', 'buildings', 'building', '00444', 44.88904571533203, 52.329078674316406, 53.29610824584961, 55.5407829284668, 'https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-05-20.0/theme=buildings/type=building/part-00444-c758194f-8660-57f6-b660-6d7341d5c7fe-c000.zstd.parquet');
 
-DROP VIEW IF EXISTS overture_buildings;
-
-CREATE VIEW overture_buildings AS
+CREATE OR REPLACE VIEW overture_buildings AS
 WITH local_bbox AS (
     SELECT
         50.3000249::DOUBLE AS minx,
